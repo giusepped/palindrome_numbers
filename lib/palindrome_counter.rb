@@ -7,7 +7,7 @@ class PalindromeCounter
   def count(start, finish)
     @counter = 0
     (start..finish).each do |num|
-      @counter += 1 if check_palindrome(num.to_s)
+      @counter += 1 if check_palindrome_recursive(num.to_s)
     end
     @counter
   end
@@ -17,6 +17,19 @@ class PalindromeCounter
   end
 
   # Since I had a bit of time left and noticed that the program was slowing down a bit
-  # when checking for a large range, I implemented also a recursive method
+  # when checking for a large range, I implemented also a recursive method to check
+  # if improved performance but it did not too much, I guess the problem is iterating
+  # through every single element of a large range
+  def check_palindrome_recursive(string)
+    if string.length < 2
+      return true
+    end
+    if string[0] != string[-1]
+      return false
+    end
+    string.slice!(0)
+    string.slice!(-1)
+    return check_palindrome_recursive(string)
+  end
 
 end
