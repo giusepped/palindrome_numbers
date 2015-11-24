@@ -27,7 +27,9 @@ $ rspec
 I created an external class that does the counting in a range. I have to methods for checking wether a number (once converted into a string) is a palindrome:
 * the first one uses the reverse ruby in-built method
 * the second one uses recursion
-In the main file I first initalise an instance of the class PalindromeCounter. Then I iterate through the .txt files in the test_files folder and for each one:
+In the main file I first initalise an instance of the class PalindromeCounter.
+
+Then I iterate through the .txt files in the test_files folder and for each one:
 * I get the first two lines and store them into variables `start` and `finish`
 * Use `chomp` on the second variable (because in the file there was a new line)
 * Calculate the count of palindrome numbers in the range
