@@ -4,5 +4,5 @@
 
 *The range of number is given in a text file (the first two lines represent the starting and the ending numbers of the range respectively)
 
-*Run the program
+
 
