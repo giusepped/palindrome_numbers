@@ -20,6 +20,7 @@ class PalindromeCounter
   # when checking for a large range, I implemented also a recursive method to check
   # if improved performance but it did not too much, I guess the problem is iterating
   # through every single element of a large range
+
   def check_palindrome_recursive(string)
     return true if string.length < 2
     return false if string[0] != string[-1]
