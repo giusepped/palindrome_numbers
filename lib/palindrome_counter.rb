@@ -21,15 +21,15 @@ class PalindromeCounter
   # if improved performance but it did not too much, I guess the problem is iterating
   # through every single element of a large range
   def check_palindrome_recursive(string)
-    if string.length < 2
-      return true
-    end
-    if string[0] != string[-1]
-      return false
-    end
+    return true if string.length < 2
+    return false if string[0] != string[-1]
+    slice_first_last_character(string)
+    return check_palindrome_recursive(string)
+  end
+
+  def slice_first_last_character(string)
     string.slice!(0)
     string.slice!(-1)
-    return check_palindrome_recursive(string)
   end
 
 end
