@@ -1,0 +1,1 @@
+require_relative './lib/palindrome_counter.rb'
