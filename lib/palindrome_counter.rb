@@ -1,11 +1,10 @@
 class PalindromeCounter
 
   def initialize
-    @counter
+    @counter = 0
   end
 
   def count(start, finish)
-    @counter = 0
     (start..finish).each do |num|
       @counter += 1 if check_palindrome_recursive(num.to_s)
     end

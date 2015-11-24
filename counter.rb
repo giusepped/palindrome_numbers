@@ -1,8 +1,7 @@
 require_relative './lib/palindrome_counter.rb'
 
-counter = PalindromeCounter.new
-
-Dir.glob('test_files/*.txt') do |test_file|
+Dir.glob('**/*.txt') do |test_file|
+  counter = PalindromeCounter.new
   range_numbers = File.foreach(test_file).first(2)
   start = range_numbers[0].chomp
   finish = range_numbers[1]
