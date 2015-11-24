@@ -24,7 +24,7 @@ class PalindromeCounter
     return true if string.length < 2
     return false if string[0] != string[-1]
     slice_first_last_character(string)
-    return check_palindrome_recursive(string)
+    check_palindrome_recursive(string)
   end
 
   def slice_first_last_character(string)
