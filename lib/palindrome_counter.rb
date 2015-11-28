@@ -12,7 +12,7 @@ class PalindromeCounter
   end
 
   def check_palindrome(string)
-    return true if string == string.reverse
+    string == string.reverse
   end
 
   # Since I had a bit of time left and noticed that the program was slowing down a bit
